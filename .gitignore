@@ -1,0 +1,21 @@
+# Binaries
+bin/
+harshad-tui
+harshad-tui.exe
+harshad-ssh
+harshad-ssh.exe
+
+# SSH Keys
+.ssh/
+id_ed25519*
+harshad_ed25519*
+
+# OS & Editor
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local documents
+*.pdf

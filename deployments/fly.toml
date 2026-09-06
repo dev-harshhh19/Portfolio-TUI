@@ -1,0 +1,26 @@
+app = "harshad-cli-portfolio"
+primary_region = "iad"
+
+[build]
+  dockerfile = "deployments/Dockerfile"
+
+[env]
+  SSH_PORT = "2222"
+  SSH_HOST = "0.0.0.0"
+
+[[services]]
+  internal_port = 2222
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 22
+  [[services.ports]]
+    port = 2222
+
+[mounts]
+  source = "ssh_data"
+  destination = "/app/.ssh"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"
